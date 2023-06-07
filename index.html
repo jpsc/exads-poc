@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>ExAds example</title>
   </head>
   <body>
     <main id="app">
@@ -12,7 +10,12 @@
     <div class="content">
       <p>This is part of the page content</p>
 
-      <iframe id="iframe" width="100%" src="ad.html"></iframe>
+      <div style="width: 300px;">
+        <script async type="application/javascript" src="https://a.adnflow.com/ad-provider.js"></script> 
+        <ins class="adsbyadnflow" data-zoneid="58" data-keywords="keywords" data-sub="123450000"></ins> 
+        <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
+      </div>
+      <!-- <iframe id="iframe" width="100%" src="ad.html"></iframe> -->
     </div>
     
     <script type="module" src="/main.js"></script>

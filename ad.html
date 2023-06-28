@@ -15,18 +15,22 @@
         
         <label for="context">Reason:</label>
         <textarea type="text" id="context"></textarea>
-        <div onclick="call()">Submit</div>
-        <!-- <button onclick="call()">Submit</button> -->
+        <button id="submit">Submit</button>
     </form>
     <script>
 
-      async function call() {
+      const submit = document.querySelector("#submit");
 
+      submit.addEventListener("click", onClick, false);
+
+      async function onClick(event) {
+        event.preventDefault();
         const response = await fetch("http://s.adnflow.com/tag.php?goal=e4da3b7fbbce2345d7772b0674a318d5&tag={conversions_tracking}");
         const jsonData = await response.json();
 
         console.log(jsonData)
       }
+
     </script>
     <script type="module" src="/main.js"></script>
   </main>

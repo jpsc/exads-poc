@@ -6,7 +6,7 @@
   </head>
   <body id="ad">
     <h1>AD</h1>
-    <!-- <form>
+    <form>
         <label for="name">Name:</label>
         <input type="text" id="name"/>
 
@@ -15,10 +15,19 @@
         
         <label for="context">Reason:</label>
         <textarea type="text" id="context"></textarea>
+        <div onclick="call()">Submit</div>
+        <!-- <button onclick="call()">Submit</button> -->
+    </form>
+    <script>
 
-        <button type="submit">Submit</button>
-    </form> -->
-    
+      async function call() {
+
+        const response = await fetch("http://s.adnflow.com/tag.php?goal=e4da3b7fbbce2345d7772b0674a318d5&tag={conversions_tracking}");
+        const jsonData = await response.json();
+
+        console.log(jsonData)
+      }
+    </script>
     <script type="module" src="/main.js"></script>
   </main>
   </body>
